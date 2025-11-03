@@ -93,6 +93,11 @@
       }
     }
   },
+  "schematics": {
+    "@schematics/angular:component": {
+      "type": "component"
+    }
+  },
   "cli": {
     "analytics": false
   }
