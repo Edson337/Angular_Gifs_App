@@ -2,7 +2,7 @@
     <gif-list [gifs]="gifsService.trendingGifs()"/>
 </section> -->
 
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-5">
+<div #groupDiv class="h-screen grid grid-cols-2 md:grid-cols-4 gap-4 pt-5 overflow-y-scroll" (scroll)="onScroll($event)">
     @for (group of gifsService.trendingGifGroup(); track $index) {
         <div class="grid gap-4">
             @for (gif of group; track gif.id) {
